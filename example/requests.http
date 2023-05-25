@@ -1,0 +1,51 @@
+### Create
+
+POST http://localhost:3000/petitions HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Make Code Europe a quarterly event!"
+}
+
+### Get All
+
+GET http://localhost:3000/petitions HTTP/1.1
+
+### Get by id
+
+GET http://localhost:3000/petitions/63cc692e-c037-4f09-9f97-5ddf7d54eb83 HTTP/1.1
+
+### Get Events
+
+GET http://localhost:3000/petitions/events HTTP/1.1
+
+
+### Sign
+
+POST http://localhost:3000/petitions/sign HTTP/1.1
+content-type: application/json
+
+{
+    "petitionId": "63cc692e-c037-4f09-9f97-5ddf7d54eb83",
+    "email": "todor@todorov.bg",
+    "name": "Todor Todorov"
+}
+
+### Revoke
+
+POST http://localhost:3000/petitions/revoke HTTP/1.1
+content-type: application/json
+
+{
+    "petitionId": "63cc692e-c037-4f09-9f97-5ddf7d54eb83",
+    "email": "todor@todorov.bg"
+}
+
+### Close
+
+POST http://localhost:3000/petitions/close HTTP/1.1
+content-type: application/json
+
+{
+    "id": "63cc692e-c037-4f09-9f97-5ddf7d54eb83"
+}
